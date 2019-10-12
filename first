@@ -1,0 +1,77 @@
+//第一题
+func order(array: [Int]) -> [Int] {
+    let ordered = array.sorted(by:>)
+    return ordered
+}
+
+//第二题
+struct Point {
+    var x = 0.0, y = 0.0
+}
+struct Size {
+    var width = 0.0
+    var length = 0.0
+struct Rectangle {
+    var point = Point()
+    var size = Size()
+    var perimeter: Size {
+            get {
+                let C = (size.length + size.width) * 2
+                return perimeter
+        }
+        }
+    var center: Point {
+        get {
+            let centerX = point.x + (size.width/2)
+            let centerY = point.y + (size.length)
+            return Point(x: centerX, y: centerY)
+        }
+    }
+    var area: Size {
+        get {
+            let S = area.length * area.width
+            return area
+        }
+}
+//    func zuobiao(x: [Int]) -> Int {
+//        return point
+//    }
+}
+//第三题
+class Person {
+    var name: String
+    var gender: String
+    var age: Int
+    var height: Int
+    init(name: String, gender: String, age: Int, height: Int) {
+        self.name = name
+        self.gender = gender
+        self.age = age
+        self.height = height
+    }
+}
+class Student : Person {
+    var grade: Int
+    var major: String
+    var weighting: Int
+    init(grade: Int,major: String,weighting: Int) {
+        self.grade = 1
+        self.major = "computing"
+        self.weighting = 0
+        super.init(name: "雷金洲", gender: "male", age: 19, height: 170)
+    }
+}
+class Teacher : Person {
+    var teachingSubject: String
+    var weight: Int
+    func BMI(x:Int) -> Int {
+        var x = height / (weight ^ 2)
+        return x
+    }
+    init(teachingSubject: String, weight: Int) {
+        super.init(name: "曹学广", gender: "male", age: 40, height: 173)
+    }
+    }
+}
+
+//返回身高差和多个学生的平均加权不会qwq
